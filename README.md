@@ -1,15 +1,11 @@
-1) When server is booted run the following commands as root.
-    yum -y update
-    yum install -y aws-cli
-    
-2) Here you will setup your AWS access, secret, and region.
-    aws configure    
-    
-3) Below command to download and install codedeploy agent
-    wget https://aws-codedeploy-ap-southeast-1.s3.amazonaws.com/latest/install
-    chmod +x ./install
-    sudo ./install auto
-    
-4) Once it is installed you can verify whether the codedeploy agent is running or not by using the command
-    sudo service codedeploy-agent status
-    
+Instructions:
+
+For running the server you need to run the server.py script:
+ python server.py
+ 
+For running the client you need to run the client.py script:
+ python client.py
+ 
+Used Integrations and services in Github to link it with Amazon SNS which allows to easily generate notifications and transmit these messages to AWS Lambda. Idempotent deployment can be done from AWs Lambda. So, I have created Lambda function named "Gojek-clientserver".
+
+
